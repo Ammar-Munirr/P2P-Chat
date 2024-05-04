@@ -7,4 +7,4 @@ User = get_user_model()
 class MyChat(models.Model):
     me = models.ForeignKey(User,on_delete=models.CASCADE,related_name='me')
     frnd = models.ForeignKey(User,on_delete=models.CASCADE,related_name='frnd')
-    chat = models.JSONField()
+    chat = models.JSONField(default=dict)
