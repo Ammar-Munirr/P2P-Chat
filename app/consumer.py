@@ -48,6 +48,4 @@ class MyChaApp(AsyncJsonWebsocketConsumer):
     async def send_msg(self,event):
         await self.send(event['msg'])
 
-        
-    async def disconnect(self):
-        pass
+    
